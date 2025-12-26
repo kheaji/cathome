@@ -88,13 +88,20 @@ async function loadPosts(searchKeyword = '') {
 
     if (error) throw error;
 
-    // 전체 게시글 수 가져오기 (페이지네이션용)
-    const { count: totalCount } = await window.supabaseClient
+    // 전체 게시글 수 가져오기 (페이지네이션용, 검색 조건 포함)
+    let countQuery = window.supabaseClient
       .from('posts')
       .select('*', { count: 'exact', head: true });
 
+    // 검색어가 있으면 제목 검색 조건 적용
+    if (searchKeyword) {
+      countQuery = countQuery.ilike('title', `%${searchKeyword}%`);
+    }
+
+    const { count: totalCount } = await countQuery;
+
     // 게시글 렌더링
-    renderPosts(posts);
+    renderPosts(posts, totalCount);
 
     // 페이지네이션 렌더링
     renderPagination(totalCount);
@@ -110,7 +117,7 @@ async function loadPosts(searchKeyword = '') {
 }
 
 // 게시글 렌더링
-function renderPosts(posts) {
+function renderPosts(posts, totalCount) {
   if (posts.length === 0) {
     postList.innerHTML = `
       <tr class="no-posts">
@@ -120,20 +127,24 @@ function renderPosts(posts) {
     return;
   }
 
-  const postsHTML = posts.map(post => `
-    <tr onclick="goToPost(${post.id})">
-      <td>${post.id}</td>
-      <td>
-        <div class="post-title">
-          ${post.image_url ? '<span class="material-symbols-outlined">image</span>' : ''}
-          ${post.title}
-        </div>
-      </td>
-      <td>${post.author_email.split('@')[0]}</td>
-      <td>${formatDate(post.created_at)}</td>
-      <td>${post.views || 0}</td>
-    </tr>
-  `).join('');
+  const postsHTML = posts.map((post, index) => {
+    // 역순 번호 계산: 전체 개수 - (현재페이지-1)*페이지당개수 - 인덱스
+    const postNumber = totalCount - (currentPage - 1) * postsPerPage - index;
+    return `
+      <tr onclick="goToPost(${post.id})">
+        <td>${postNumber}</td>
+        <td>
+          <div class="post-title">
+            ${post.image_url ? '<span class="material-symbols-outlined">image</span>' : ''}
+            ${post.title}
+          </div>
+        </td>
+        <td>${post.author_email.split('@')[0]}</td>
+        <td>${formatDate(post.created_at)}</td>
+        <td>${post.views || 0}</td>
+      </tr>
+    `;
+  }).join('');
 
   postList.innerHTML = postsHTML;
 }

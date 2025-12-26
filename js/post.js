@@ -134,8 +134,8 @@ function formatDate(dateString) {
 
 // 수정 버튼
 document.getElementById('btn-edit')?.addEventListener('click', () => {
-  // 수정 페이지로 이동 (향후 구현)
-  alert('수정 기능은 5단계에서 구현됩니다.');
+  // 수정 페이지로 이동
+  window.location.href = `write.html?id=${postId}`;
 });
 
 // 삭제 버튼

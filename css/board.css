@@ -158,6 +158,10 @@
   background: #fff8f3;
 }
 
+.post-table tbody tr:hover .post-title{
+  color: #FF6D00;
+}
+
 /* 컬럼 너비 */
 .col-num {
   width: 80px;
@@ -188,10 +192,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.post-title:hover {
-  color: #FF6D00;
+  transition: 0.3s all ease;
 }
 
 .post-title .material-symbols-outlined {
