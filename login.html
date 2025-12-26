@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 - 집사 커뮤니티</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1 class="login-title">집사 커뮤니티</h1>
+
+      <!-- 탭 메뉴 -->
+      <div class="tab-menu">
+        <button class="tab-btn active" data-tab="login">로그인</button>
+        <button class="tab-btn" data-tab="signup">회원가입</button>
+      </div>
+
+      <!-- 로그인 폼 -->
+      <form id="login-form" class="auth-form active">
+        <div class="form-group">
+          <label for="login-email">이메일</label>
+          <input type="email" id="login-email" placeholder="이메일을 입력하세요" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">비밀번호</label>
+          <input type="password" id="login-password" placeholder="비밀번호를 입력하세요" required>
+        </div>
+        <button type="submit" class="submit-btn">로그인</button>
+        <p class="error-message" id="login-error"></p>
+      </form>
+
+      <!-- 회원가입 폼 -->
+      <form id="signup-form" class="auth-form">
+        <div class="form-group">
+          <label for="signup-email">이메일</label>
+          <input type="email" id="signup-email" placeholder="이메일을 입력하세요" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">비밀번호</label>
+          <input type="password" id="signup-password" placeholder="비밀번호 (최소 6자)" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password-confirm">비밀번호 확인</label>
+          <input type="password" id="signup-password-confirm" placeholder="비밀번호를 다시 입력하세요" required>
+        </div>
+        <button type="submit" class="submit-btn">회원가입</button>
+        <p class="error-message" id="signup-error"></p>
+      </form>
+
+      <!-- 홈으로 돌아가기 -->
+      <a href="index.html" class="back-link">메인으로 돌아가기</a>
+    </div>
+  </div>
+
+  <!-- Supabase 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Supabase 설정 -->
+  <script src="js/supabase-config.js"></script>
+  <!-- 로그인 기능 -->
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* 게시글 상세 페이지 스타일 */
+
+/* ========== 메인 컨테이너 ========== */
+.post-main {
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.post-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== 게시글 헤더 ========== */
+.post-header {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 30px;
+}
+
+.post-title {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #111111;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.post-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-author {
+  font-weight: 600;
+  color: #FF6D00;
+}
+
+/* ========== 게시글 내용 ========== */
+.post-content {
+  margin-bottom: 40px;
+}
+
+.post-image {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.post-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* ========== 액션 버튼 ========== */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.post-actions-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-list,
+.btn-edit,
+.btn-delete {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-list {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.btn-list:hover {
+  background: #e0e0e0;
+}
+
+.btn-edit {
+  background: #00A8EA;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #0090cc;
+}
+
+.btn-delete {
+  background: #ff3b30;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #e6342a;
+}
+
+/* ========== 반응형 디자인 ========== */
+@media (max-width: 768px) {
+  .post-container {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .post-title {
+    font-size: 22px;
+  }
+
+  .post-meta {
+    font-size: 13px;
+  }
+
+  .post-text {
+    font-size: 15px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post-actions-right {
+    width: 100%;
+  }
+
+  .btn-list,
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+  }
+}

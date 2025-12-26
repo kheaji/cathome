@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고양이 쇼핑몰</title>
+  <!-- Pretendard 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="main-slide">
+    <div class="header-top-wrap">
+      <span class="material-symbols-outlined">campaign</span> 이번 주 할인 아이템 모아보기
+    </div>
+    <div class="header-wrap">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo_ko.png" alt="고양이 쇼핑몰 로고">
+        </a>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="어떤 상품을 찾으시나요?">
+        <button type="button"><span class="material-symbols-outlined">search</span></button>
+      </div>
+      <div class="header-icons">
+        <button type="button" class="icon-btn" title="알림"><span class="material-symbols-outlined">notifications</span></button>
+        <button type="button" class="icon-btn" title="장바구니"><span class="material-symbols-outlined">shopping_cart</span></button>
+        <button type="button" class="icon-btn" id="login-btn" title="로그인"><span class="material-symbols-outlined">person</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrap">
+      <ul>
+        <li><a href="#">카테고리</a></li>
+        <li><a href="#">핫딜</a></li>
+        <li><a href="#">신상품</a></li>
+        <li><a href="#">랭킹</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">체험단</a></li>
+        <li><a href="board.html">집사커뮤니티</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Banner 슬라이더 -->
+    <section id="banner-slide" class="banner">
+      <div class="banner-wrapper">
+        <div class="slider-container">
+          <div class="slide active">
+            <img src="img/main-slide-01.jpg" alt="슬라이드 1">
+          </div>
+          <div class="slide">
+            <img src="img/main-slide-02.jpg" alt="슬라이드 2">
+          </div>
+          <div class="slide">
+            <img src="img/main-slide-03.jpg" alt="슬라이드 3">
+          </div>
+          <div class="slide">
+            <img src="img/main-slide-04.jpg" alt="슬라이드 4">
+          </div>
+        </div>
+        <button class="slider-btn prev">&lt;</button>
+        <button class="slider-btn next">&gt;</button>
+        <div class="slider-counter">
+          <span class="current-slide">1</span> / <span class="total-slides">4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub Category -->
+    <section id="sub-category" class="sub-category">
+      <div class="sub-category-wrap">
+        <div class="category-wrap">
+          <button>tab</button>
+          <button>tab</button>
+          <button>tab</button>
+        </div>
+        <div class="aside-slide">
+          aside-slide
+        </div>
+        <div class="category-wrap">
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+          <div class="sub-category">sub-category</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rank1 상품 -->
+    <section id="rank1-items" class="rank1-items">
+      <div class="items-wrap">
+        <div class="rank1-title">rank1-title</div>
+        <a href="#" class="more">more</a>
+        <div class="items-list">
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rank2 상품 -->
+    <section id="rank2-items" class="rank2-items">
+      <div class="items-wrap">
+        <div class="rank2-title">rank2-title</div>
+        <a href="#" class="more">more</a>
+        <div class="items-list">
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="card-img">card-img</div>
+            <div class="card-text">card-text</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rank3 상품 -->
+    <section id="rank3-items" class="rank3-items">
+      <div class="items-wrap">
+        <div class="rank3-title">rank3-title</div>
+        <button class="rank-time">rank-time</button>
+        <div class="rank-count">
+          rank-count
+        </div>
+        <div class="items-list">
+          <article>
+            <div class="rank-img">rank-img</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+          <article>
+            <div class="rank-img">rank-img</div>
+            <div class="card-txt">card-txt</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ranking -->
+    <section id="rank-ranking" class="rank-ranking">
+      <div class="rank-wrap">
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+        <div class="rank-count">
+          <div class="rank-title">rank-title</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section id="rank3-community" class="rank3-community">
+      <div class="community-wrap">
+        <div class="community-title">community-title</div>
+        <a href="board.html" class="more">more</a>
+        <div class="community-list">
+          <article>
+            <div class="comm-img">comm-img</div>
+            <div class="comm-title">comm-title</div>
+          </article>
+          <article>
+            <div class="comm-img">comm-img</div>
+            <div class="comm-title">comm-title</div>
+          </article>
+          <article>
+            <div class="comm-img">comm-img</div>
+            <div class="comm-title">comm-title</div>
+          </article>
+          <article>
+            <div class="comm-img">comm-img</div>
+            <div class="comm-title">comm-title</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business -->
+    <section id="business" class="business">
+      <div class="business-wrap">
+        <div class="business-item">
+          <a href="#">Business > 1</a>
+        </div>
+        <div class="business-item">
+          <a href="#">Business > 2</a>
+        </div>
+        <div class="business-item">
+          <a href="#">Business > 3</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-wrap">
+      <div class="footer-logo">footer-logo</div>
+      <div class="sns">SNS</div>
+      <div class="footer-link">footer-link</div>
+      <div class="footer-link">footer-link</div>
+    </div>
+  </footer>
+
+  <!-- Supabase 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Supabase 설정 -->
+  <script src="js/supabase-config.js"></script>
+  <!-- 로그인 상태 관리 -->
+  <script src="js/user-state.js"></script>
+  <!-- JavaScript -->
+  <script src="js/slider.js"></script>
+
+</body>
+</html>

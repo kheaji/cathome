@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 - 집사 커뮤니티</title>
+  <!-- Pretendard 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="main-slide">
+    <div class="header-top-wrap">
+      <span class="material-symbols-outlined">campaign</span> 이번 주 할인 아이템 모아보기
+    </div>
+    <div class="header-wrap">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo_ko.png" alt="고양이 쇼핑몰 로고">
+        </a>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="어떤 상품을 찾으시나요?">
+        <button type="button"><span class="material-symbols-outlined">search</span></button>
+      </div>
+      <div class="header-icons">
+        <button type="button" class="icon-btn" title="알림"><span class="material-symbols-outlined">notifications</span></button>
+        <button type="button" class="icon-btn" title="장바구니"><span class="material-symbols-outlined">shopping_cart</span></button>
+        <button type="button" class="icon-btn" id="login-btn" title="로그인"><span class="material-symbols-outlined">person</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrap">
+      <ul>
+        <li><a href="#">카테고리</a></li>
+        <li><a href="#">핫딜</a></li>
+        <li><a href="#">신상품</a></li>
+        <li><a href="#">랭킹</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">체험단</a></li>
+        <li><a href="board.html" class="active">집사커뮤니티</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="post-main">
+    <div class="post-container">
+
+      <!-- 게시글 정보 -->
+      <div class="post-header">
+        <h1 class="post-title" id="post-title">로딩 중...</h1>
+        <div class="post-meta">
+          <span class="post-author" id="post-author"></span>
+          <span class="post-date" id="post-date"></span>
+          <span class="post-views" id="post-views"></span>
+        </div>
+      </div>
+
+      <!-- 게시글 내용 -->
+      <div class="post-content" id="post-content">
+        <!-- 이미지 -->
+        <div class="post-image" id="post-image-container"></div>
+        <!-- 텍스트 내용 -->
+        <div class="post-text" id="post-text"></div>
+      </div>
+
+      <!-- 게시글 액션 버튼 -->
+      <div class="post-actions" id="post-actions">
+        <button type="button" class="btn-list" onclick="location.href='board.html'">목록</button>
+        <div class="post-actions-right" id="author-actions" style="display: none;">
+          <button type="button" class="btn-edit" id="btn-edit">수정</button>
+          <button type="button" class="btn-delete" id="btn-delete">삭제</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-wrap">
+      <div class="footer-logo">footer-logo</div>
+      <div class="sns">SNS</div>
+      <div class="footer-link">footer-link</div>
+      <div class="footer-link">footer-link</div>
+    </div>
+  </footer>
+
+  <!-- Supabase 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Supabase 설정 -->
+  <script src="js/supabase-config.js"></script>
+  <!-- 로그인 상태 관리 -->
+  <script src="js/user-state.js"></script>
+  <!-- 게시글 상세 기능 -->
+  <script src="js/post.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+# 디자인 시스템 가이드
+
+## 컬러 팔레트
+**메인 컬러**
+- Primary: #FF6D00 (오렌지)
+- Secondary: #00A8EA (블루)
+
+**보조 컬러**
+- Light Orange: #FFA35F
+- Peach: #FFD8BD
+- Sky Blue: #6DCDF1
+- Light Blue: #DAF1F7
+
+### 사용 가이드
+- 주요 버튼, 헤더: Primary (#FF6D00)
+- 링크, 강조 요소: Secondary (#00A8EA)
+- 배경, 카드: 보조 컬러 활용
+- 텍스트: 다크 그레이 (#333333)
+
+
+## 타이포그래피
+**웹폰트**
+- 메인 폰트: Chiron GoRound TC
+- 폰트 소스: 
+- Google Fonts 링크: [@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');]
+
+
+**폰트 적용**
+- 제목(h1-h3): Chiron GoRound TC, Bold
+- 본문: Chiron GoRound TC, Regular
+- 폴백 폰트: -apple-system, sans-serif
+
+**폰트 크기**
+- h1: 40px
+- h2: 32px
+- h3: 24px
+- body: 16px
+
+
+
+
+
+
+
+
+
